@@ -13,6 +13,7 @@
 		153B37AA1B0C8D6E006F0692 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 153B37A91B0C8D6E006F0692 /* Images.xcassets */; };
 		153B37AD1B0C8D6E006F0692 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 153B37AB1B0C8D6E006F0692 /* LaunchScreen.xib */; };
 		153B37B91B0C8D6F006F0692 /* dropboxSwiftSDKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 153B37B81B0C8D6F006F0692 /* dropboxSwiftSDKTests.swift */; };
+		352EEEC66CCB6AB742E330EE /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06AA5129F3140B0D3E5A23A8 /* Pods.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		06AA5129F3140B0D3E5A23A8 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		153B379D1B0C8D6E006F0692 /* dropboxSwiftSDK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dropboxSwiftSDK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		153B37A11B0C8D6E006F0692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		153B37A21B0C8D6E006F0692 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +38,8 @@
 		153B37B21B0C8D6F006F0692 /* dropboxSwiftSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dropboxSwiftSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		153B37B71B0C8D6F006F0692 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		153B37B81B0C8D6F006F0692 /* dropboxSwiftSDKTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dropboxSwiftSDKTests.swift; sourceTree = "<group>"; };
+		5E621B08A8053E082F60576E /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		8A1CD5CEFD274FD418014B51 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				352EEEC66CCB6AB742E330EE /* Pods.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,12 +61,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		056D3A59AC652E7C057CF357 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				06AA5129F3140B0D3E5A23A8 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		153B37941B0C8D6E006F0692 = {
 			isa = PBXGroup;
 			children = (
 				153B379F1B0C8D6E006F0692 /* dropboxSwiftSDK */,
 				153B37B51B0C8D6F006F0692 /* dropboxSwiftSDKTests */,
 				153B379E1B0C8D6E006F0692 /* Products */,
+				AACB48AA7B86A059FF5D4F96 /* Pods */,
+				056D3A59AC652E7C057CF357 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -112,6 +127,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		AACB48AA7B86A059FF5D4F96 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5E621B08A8053E082F60576E /* Pods.debug.xcconfig */,
+				8A1CD5CEFD274FD418014B51 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -119,9 +143,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 153B37BC1B0C8D6F006F0692 /* Build configuration list for PBXNativeTarget "dropboxSwiftSDK" */;
 			buildPhases = (
+				72532699270D4CA36B398AC7 /* Check Pods Manifest.lock */,
 				153B37991B0C8D6E006F0692 /* Sources */,
 				153B379A1B0C8D6E006F0692 /* Frameworks */,
 				153B379B1B0C8D6E006F0692 /* Resources */,
+				A5D2772BC01CAC54EB9964B8 /* Embed Pods Frameworks */,
+				140D87D63C6345FBC10159B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -206,6 +233,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		140D87D63C6345FBC10159B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72532699270D4CA36B398AC7 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A5D2772BC01CAC54EB9964B8 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		153B37991B0C8D6E006F0692 /* Sources */ = {
@@ -338,6 +413,7 @@
 		};
 		153B37BD1B0C8D6F006F0692 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5E621B08A8053E082F60576E /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = dropboxSwiftSDK/Info.plist;
@@ -348,6 +424,7 @@
 		};
 		153B37BE1B0C8D6F006F0692 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8A1CD5CEFD274FD418014B51 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = dropboxSwiftSDK/Info.plist;
@@ -409,6 +486,7 @@
 				153B37BE1B0C8D6F006F0692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		153B37BF1B0C8D6F006F0692 /* Build configuration list for PBXNativeTarget "dropboxSwiftSDKTests" */ = {
 			isa = XCConfigurationList;
@@ -417,6 +495,7 @@
 				153B37C11B0C8D6F006F0692 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
